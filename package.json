@@ -7,6 +7,12 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.1"
+    "@vueuse/core": "^8.4.2",
+    "@vueuse/nuxt": "^8.4.2",
+    "nuxt": "3.0.0-rc.4"
+  },
+  "dependencies": {
+    "@vueuse/firebase": "^8.4.2",
+    "firebase": "^9.8.0"
   }
 }
