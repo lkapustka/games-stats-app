@@ -16,6 +16,8 @@ export default defineNuxtPlugin(() => {
   const app = initializeApp(firebaseConfig)
   const auth = getAuth(app)
 
+  initUser()
+
   return {
     provide: {
       firebaseApp: app,
