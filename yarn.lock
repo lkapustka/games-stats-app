@@ -1256,14 +1256,6 @@
     "@vueuse/shared" "8.4.2"
     vue-demi "*"
 
-"@vueuse/firebase@^8.4.2":
-  version "8.4.2"
-  resolved "https://registry.yarnpkg.com/@vueuse/firebase/-/firebase-8.4.2.tgz#205381eef1f336df48d8d4776716d6fe847ba081"
-  integrity sha512-mPOyLQ8JmABrTQK1Aw8fDZQvu8Jak6bNkNBfpYIepLIG03lJeJYGmtWCOhxagKHYruxlPx4p9EcER3NsSq1kTw==
-  dependencies:
-    "@vueuse/shared" "8.4.2"
-    vue-demi "*"
-
 "@vueuse/head@^0.7.6":
   version "0.7.6"
   resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.7.6.tgz#39eb2aa593db6f02d10ba469b33d8cfbce038183"
