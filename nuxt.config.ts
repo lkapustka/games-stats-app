@@ -9,9 +9,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
   runtimeConfig: {
-    FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
     public: {
-      FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+      firebaseApiKey: process.env.FIREBASE_API_KEY,
     }
   },
 })
