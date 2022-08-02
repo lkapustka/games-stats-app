@@ -9,9 +9,10 @@
   "devDependencies": {
     "@vueuse/core": "^8.4.2",
     "@vueuse/nuxt": "^8.4.2",
-    "nuxt": "3.0.0-rc.4"
+    "nuxt": "3.0.0-rc.6"
   },
   "dependencies": {
+    "bootstrap": "5.2.0",
     "firebase": "^9.8.0"
   }
 }
