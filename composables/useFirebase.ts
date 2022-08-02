@@ -3,6 +3,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  AuthError
 } from 'firebase/auth'
 
 export const createUser = async (email: string, password: string) => {
@@ -11,7 +12,7 @@ export const createUser = async (email: string, password: string) => {
     auth,
     email,
     password
-  ).catch((error) => {
+  ).catch((error: AuthError) => {
     const errorCode = error.code
     const errorMessage = error.message
   })
@@ -25,7 +26,7 @@ export const signInUser = async (email: string, password: string) => {
     auth,
     email,
     password
-  ).catch((error) => {
+  ).catch((error: AuthError) => {
     const errorCode = error.code
     const errorMessage = error.message
   })
@@ -36,18 +37,19 @@ export const signInUser = async (email: string, password: string) => {
 export const initUser = async () => {
   const auth = getAuth()
   const firebaseUser = useFirebaseUser()
-  firebaseUser.value = auth.currentUser
+
+  const router = useRouter()
 
   onAuthStateChanged(auth, (user) => {
     if (user) {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
-      const uid = user.uid
+      firebaseUser.value = user
     } else {
       // User is signed out
+      firebaseUser.value = null
+      router.push('/')
     }
-
-    firebaseUser.value = user
   })
 }
 
