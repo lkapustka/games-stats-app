@@ -9,7 +9,7 @@ const signIn = () => {
 </script>
 
 <template>
-  <form class="p-5 m-auto bg-white rounded-3" @submit.prevent>
+  <form class="bg-white rounded-3" @submit.prevent>
     <div class="mb-3">
       <BaseInput
         v-model="signInForm.email"
