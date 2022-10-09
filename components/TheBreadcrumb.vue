@@ -39,8 +39,8 @@ const crumbs = computed(() => {
 </script>
 
 <template>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+  <nav class="zi" aria-label="breadcrumb">
+    <ol class="breadcrumb zi">
       <li v-for="(crumb, index) in crumbs" :key="index" class="breadcrumb-item">
         <NuxtLink v-if="!crumb.isLast" :to="crumb.href">{{
           crumb.title
@@ -52,3 +52,9 @@ const crumbs = computed(() => {
     </ol>
   </nav>
 </template>
+
+<style lang="scss" scoped>
+nav {
+  z-index: 1;
+}
+</style>

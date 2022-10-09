@@ -26,7 +26,6 @@ const handleSidenav = () => {
   <header class="header p-3">
     <Breadcrumb />
     <div class="navbar p-0 justify-content-end">
-      {{ sidenavWidth }}
       <a href="#" class="navbar-brand d-flex">
         <img src="../assets/icons/user.svg" alt="" width="24" height="24" />
       </a>
@@ -47,6 +46,5 @@ const handleSidenav = () => {
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 201, 0, 0.174);
 }
 </style>
