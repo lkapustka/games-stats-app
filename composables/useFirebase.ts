@@ -3,7 +3,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
-  AuthError
+  AuthError,
 } from 'firebase/auth'
 
 export const createUser = async (email: string, password: string) => {
@@ -34,7 +34,7 @@ export const signInUser = async (email: string, password: string) => {
   return userCredential
 }
 
-export const initUser = async () => {
+export const initUser = () => {
   const auth = getAuth()
   const firebaseUser = useFirebaseUser()
 
@@ -55,7 +55,5 @@ export const initUser = async () => {
 
 export const signOutUser = async () => {
   const auth = getAuth()
-  const result = await auth.signOut()
-
-  return result
+  return await auth.signOut()
 }
