@@ -26,18 +26,18 @@ const handleSidenav = () => {
   <header class="header p-3">
     <Breadcrumb />
     <div class="navbar p-0 justify-content-end">
-      <a href="#" class="navbar-brand d-flex">
+      <NuxtLink to="/authentication" class="navbar-brand d-flex">
         <img src="../assets/icons/user.svg" alt="" width="24" height="24" />
-      </a>
-      <a href="#" class="navbar-brand d-flex" @click="handleSidenav()">
+      </NuxtLink>
+      <button class="navbar-brand d-flex" @click="handleSidenav()">
         <img src="../assets/icons/menu.svg" alt="" width="24" height="24" />
-      </a>
-      <a href="#" class="navbar-brand d-flex">
+      </button>
+      <button class="navbar-brand d-flex">
         <img src="../assets/icons/settings.svg" alt="" width="24" height="24" />
-      </a>
-      <a href="#" class="navbar-brand d-flex m-0">
+      </button>
+      <button class="navbar-brand d-flex m-0">
         <img src="../assets/icons/bell.svg" alt="" width="24" height="24" />
-      </a>
+      </button>
     </div>
   </header>
 </template>
